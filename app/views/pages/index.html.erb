@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>index.html</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="admin">
+	<!-- Date: 2011-09-23 -->
+</head>
+<body>
+	<h1>Listing locations</h1>
+
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Address</th>
+	    <th>Longitude</th>
+	    <th>Latitude</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+
+	<% @locations.each do |location| %>
+	  <tr>
+	    <td><%= location.name %></td>
+	    <td><%= location.address %></td>
+	    <td><%= location.longitude %></td>
+	    <td><%= location.latitude %></td>
+	    <td><%= link_to 'Show', location %></td>
+	    <td><%= link_to 'Edit', edit_location_path(location) %></td>
+	    <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'New Location', new_location_path %>
+	<%= gmaps4rails(@json) %>
+</body>
+</html>
