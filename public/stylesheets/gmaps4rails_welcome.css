@@ -1,0 +1,37 @@
+#map-container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 100%;
+}
+
+#gmaps4rails_map {
+  width: 800px;
+  height: 600px;
+
+#simple_example_window {
+    width: 300px;
+  }
+  #simple_example_window_contents{
+    background-color: #FFF;
+  }
+  #custom_info_window_red_beak{
+    width: 28px;
+    height: 38px;
+    background: url('../examples/images/corners/red_beak.png') top left no-repeat transparent;
+  }
+  * html #simple_example_window_beak{
+    /* Alpha transparencies hack for IE */
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../examples/images/corners/red_beak.png', sizingMethod='crop');
+  }
+  #simple_example_window_tl, #simple_example_window_tr, #simple_example_window_bl, #simple_example_window_br,
+  #simple_example_window_t,#simple_example_window_l,#simple_example_window_r,#simple_example_window_b{
+    background-color: #F00;
+    height: 2px;
+    width: 2px;
+	}

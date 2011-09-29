@@ -1,4 +1,10 @@
 class LocationsController < ApplicationController
+  
+  def home
+    @title = "Home"
+  end
+  
+  
   # GET /locations
   # GET /locations.xml
   def index

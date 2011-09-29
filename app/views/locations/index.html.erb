@@ -26,5 +26,15 @@
 
 <br />
 
+
+
+
 <%= link_to 'New Location', new_location_path %>
-<%= gmaps4rails(@json) %>
+<!--<%= gmaps4rails(@json) %>
+-->
+<div id="map" style="width:100%;height:100%">
+   <%= stylesheet_link_tag 'gmaps4rails_welcome' %>
+   <%= gmaps4rails(@models_map, false, true) %>
+
+</div>
+

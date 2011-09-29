@@ -1,6 +1,10 @@
 Gmaps::Application.routes.draw do
+  resources :users
+  
   resources :locations
-  root :to => "locations#index"
+  root :to => "start#index"
+  match '/locations', :to => 'locations#index'
+  match '/users', :to => 'users#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
